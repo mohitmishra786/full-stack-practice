@@ -10,3 +10,10 @@ server.on('request', app);
 server.listen(3000, function(){
     console.log('server started on port 3000');
 });
+
+/* Begin Websocket */
+// Now here firstly we will do `npm i ws`
+
+const WebSocketServer = require('ws').Server;
+
+const wss = new WebSocketServer({server: server});
